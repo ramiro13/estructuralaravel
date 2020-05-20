@@ -7,7 +7,7 @@
 <div class="container">
 
 <div class="row">
-
+@if($notas)
 @foreach ($notas as $nota)
 
 <div class="col-4">
@@ -20,7 +20,7 @@
 </div>
 
 @endforeach
-
+@endif
 </div>
 </div>
 @endsection

@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`notas` (
   `titulo` VARCHAR(45) NOT NULL,
   `texto` VARCHAR(45) NULL,
   `created_at` TIMESTAMP NULL,
-  `update_at` TIMESTAMP NULL,
+  `updated_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
