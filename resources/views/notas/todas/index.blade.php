@@ -4,7 +4,7 @@
 
 @include('notas.todas.modal')
 
-<div class="container">
+<div class="container-fluid">
 
 <div class="row">
 @if($notas)

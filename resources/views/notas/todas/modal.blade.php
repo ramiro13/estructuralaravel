@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid mb-4">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Crear nota</button>
 
 </div>
