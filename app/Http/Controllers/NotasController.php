@@ -35,12 +35,15 @@ class NotasController extends Controller
         return view('notas.todas.edit',['nota'=>Notas::findOrFail($id)]);
     }
 
-    public function update (Request $request,$id){
-        $nota=Notas::findORFail($id);
 
-        $nota->titulo = request('titulo');
-        $nota->texto = request('texto');
+    public function update (Request $request, $id){
+        $nota=Notas::findOrFail($id);
+
+        $nota->titulo = $request->get('titulo');
+        $nota->texto =  $request->get('texto');
 
         $nota->update();
+
+        return redirect('/notas/todas');
     }
 }
