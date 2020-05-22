@@ -46,4 +46,12 @@ class NotasController extends Controller
 
         return redirect('/notas/todas');
     }
+
+    public function destroy($id){
+
+        $nota = Notas::findOrFail($id);
+        $nota->delete();
+
+        return redirect('/notas/todas');
+    }
 }

@@ -7,8 +7,12 @@
 <div class="container-fluid">
 
 <div class="row">
+
 @if($notas)
+
 @foreach ($notas as $nota)
+
+@include('notas.todas.modal-delete')
 
 <div class="col-4">
     <div class="card border-primary mb-3" style="max-width: 18rem;">
@@ -18,13 +22,21 @@
         </div>
         <div class="card-footer">
 
-        <button type="button" class="btn btn-danger float-right ml-2"><i class="far fa-trash-alt"></i></button>
+        <!-- Button modal -->
+        <button type="button" class="btn btn-danger float-right ml-2" data-toggle="modal" data-target="#modalEliminar-{{$nota->id}}">
+            <i class="far fa-trash-alt"></i>
+        </button>
 
         <a href="{{URL::action('NotasController@edit',$nota->id)}}">
-        <button type="button" class="btn btn-info float-right ">
-            <i class="far fa-edit"></i>
-        </button>
+            <button type="button" class="btn btn-info float-right ">
+                <i class="far fa-edit"></i>
+            </button>
         </a>
+
+
+
+
+  
     </div>
     </div>
 
